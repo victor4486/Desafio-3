@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+<main>
+
+    <div class="container my-4"> <!-- Espaçamento vertical -->
+        <!-- Seção para tratamentos faciais -->
+        <section>
+            <h3 class="titulo-tratamentos text-center">Tratamentos Faciais</h3>
+            <div class="row justify-content-center"> <!-- Centraliza os cartões -->
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4"> <!-- Responsividade e espaçamento -->
+                    <div class="card">
+                        <img class="card-img-top" src="static/imagens/peeling.jpg" alt="Peeling">
+                        <div class="card-body">
+                            <h4 class="card-title">Peeling Químico</h4>
+                            <p class="card-text">Um tratamento que utiliza ácidos específicos para remover as camadas superficiais da pele.</p>
+                            <button class="btn btn-primary" onclick="abrirModal('Peeling Químico', 'O peeling químico usa ácidos para remover camadas superficiais da pele, melhorando textura e reduzindo manchas.')">Saber mais</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4"> <!-- Responsividade e espaçamento -->
+                    <div class="card">
+                        <img class="card-img-top" src="static/imagens/microagulhamento.png" alt="Microagulhamento">
+                        <div class="card-body">
+                            <h4 class="card-title">Microagulhamento</h4>
+                            <p class="card-text">Usa pequenas agulhas para estimular colágeno e melhorar rugas, cicatrizes e poros dilatados.</p>
+                            <button class="btn btn-primary" onclick="abrirModal('Microagulhamento', 'Usa agulhas para estimular a produção de colágeno.')">Saber mais</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4"> <!-- Responsividade e espaçamento -->
+                    <div class="card">
+                        <img class="card-img-top" src="static/imagens/carboxiterapia.png" alt="Carboxiterapia">
+                        <div class="card-body">
+                            <h4 class="card-title">Carboxiterapia</h4>
+                            <p class="card-text">Injeta dióxido de carbono para aumentar circulação e reduzir celulite, estrias e flacidez.</p>
+                            <button class="btn btn-primary" onclick="abrirModal('Carboxiterapia', 'A carboxiterapia usa dióxido de carbono para melhorar a circulação.')">Saber mais</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seções adicionais para outros tipos de tratamentos -->
+
+           <div class="container my-4"> <!-- Espaçamento vertical -->
+        <section>
+            <h3 class="titulo-tratamentos text-center" id='corporais'>Tratamentos Corporais</h3> <!-- Centraliza o título -->
+            <div class="row justify-content-center"> <!-- Centraliza os cartões -->
+                <!-- Card 1 -->
+                <div class="col-md-4 col-12 mb-4"> <!-- Responsividade para diferentes tamanhos de tela -->
+                    <div class="card">
+                        <img class="card-img-top" src="static/imagens/drenagem.jpg" alt="Drenagem Linfática">
+                        <div class="card-body">
+                            <h4 class="card-title">Drenagem Linfática</h4>
+                            <p class="card-text">Uma massagem suave para estimular o sistema linfático, ajudando a reduzir inchaço e retenção de líquidos.</p>
+                            <button class="btn btn-primary" onclick="abrirModal('Drenagem Linfática', 'Uma massagem suave para estimular o sistema linfático.')">Saber mais</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4 col-12 mb-4"> <!-- Mesmo comportamento do outro lado -->
+                    <div class="card">
+                        <img class="card-img-top" src="static/imagens/criolipolise.png" alt="Criolipólise">
+                        <div class="card-body">
+                            <h4 class="card-title">Criolipólise</h4>
+                            <p class="card-text">Um tratamento que usa temperaturas baixas para congelar e eliminar células de gordura.</p>
+                            <button class="btn btn-primary" onclick="abrirModal('Criolipólise', 'Usa temperaturas baixas para congelar e eliminar células de gordura.')">Saber mais</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4 col-12 mb-4"> <!-- Mesmo comportamento do outro lado -->
+                    <div class="card">
+                        <img class="card-img-top" src="static/imagens/ultrassom.jpg" alt="Ultrassom">
+                        <div class="card-body">
+                            <h4 class="card-title">Ultrassom de Alta Frequência</h4>
+                            <p class="card-text">Usa ondas sonoras para quebrar células de gordura e melhorar a circulação.</p>
+                            <button class="btn btn-primary" onclick="abrirModal('Ultrassom de Alta Frequência', 'Usa ondas sonoras para quebrar células de gordura.')">Saber mais</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container my-4"> <!-- Espaçamento vertical -->
+        <!-- Seção para massagens -->
+        <section>
+            <h3 class="titulo-tratamentos text-center" id="massagens">Massagens</h3> <!-- Centraliza o título -->
+            <div class="row justify-content-center"> <!-- Centraliza os cartões -->
+                <!-- Card 1 -->
+                <div class="col-md-4 col-12 mb-4"> <!-- Responsividade para diferentes tamanhos de tela -->
+                    <div class="card"> <!-- Aplicação de customização e bordas -->
+                        <img class="card-img-top" src="/static/imagens/sueca.jpeg" alt="Massagem Sueca"> <!-- Imagem com bordas arredondadas -->
+                        <div class="card-body">
+                            <h4 class="card-title">Massagem Sueca</h4>
+                            <p class="card-text">Combina movimentos suaves e firmes para relaxamento muscular, melhora da circulação e alívio do estresse.</p>
+                            <button class="btn btn-primary" onclick="abrirModal('Massagem Sueca', 'Combina movimentos suaves e firmes para relaxamento muscular.')">Saber mais</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4 col-12 mb-4"> <!-- Mesmo comportamento do outro lado -->
+                    <div class="card">
+                        <img class="card-img-top" src="/static/imagens/shiatsu.jpeg" alt="Massagem Shiatsu"> <!-- Imagem com bordas arredondadas -->
+                        <div class="card-body">
+                            <h4 class="card-title">Massagem Shiatsu</h4>
+                            <p class="card-text">Técnica japonesa que usa pressão dos dedos para estimular pontos de energia, promovendo equilíbrio e relaxamento.</p>
+                            <button class="btn btn-primary" onclick="abrirModal('Massagem Shiatsu', 'Usa pressão dos dedos para estimular pontos de energia.')">Saber mais</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4 col-12 mb-4"> <!-- Mesmo comportamento do outro lado -->
+                    <div class="card">
+                        <img class="card-img-top" src="/static/imagens/desportiva.png" alt="Massagem Desportiva"> <!-- Imagem com bordas arredondadas -->
+                        <div class="card-body">
+                            <h4 class="card-title">Massagem Desportiva</h4>
+                            <p class="card-text">Projetada para atletas, foca em áreas tensionadas e ajuda na recuperação e prevenção de lesões.</p>
+                            <button class="btn btn-primary" onclick="abrirModal('Massagem Desportiva', 'Projetada para atletas, foca em áreas tensionadas.')">Saber mais</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</main>
+
+<!-- Modal e Overlay -->
+<div class="overlay" id="overlay" onclick="fecharModal()"></div>
+<div class="modal" id="modal">
+    <h2 id="modal-title">Título do Modal</h2>
+    <p id="modal-text">Texto do modal.</p>
+    <button class="btn btn-primary" onclick="fecharModal()">Fechar</button>
+</div>
+
+<!-- JavaScript para controle do modal -->
+<script>
+    function abrirModal(titulo, texto) {
+        document.getElementById("modal-title").innerText = titulo; // Define o título do modal
+        document.getElementById("modal-text").innerText = texto; // Define o texto do modal
+        document.getElementById("overlay").style.display = "block"; // Mostra o overlay
+        document.getElementById("modal").style.display = "block"; // Mostra o modal
+    }
+
+    function fecharModal() {
+        document.getElementById("overlay").style.display = "none"; // Oculta o overlay
+        document.getElementById("modal").style.display = "none"; // Oculta o modal
+    }
+</script>
+{% endblock %}

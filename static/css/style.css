@@ -1,0 +1,220 @@
+ /* utilizado em todos */
+
+ .display-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.remove{
+    text-decoration: none;
+}
+
+
+
+/* navbar - heater */
+
+.navbar-custom {
+    background-color: #FA8072; /* Cor salmão para a navbar */
+
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: white; /* Cor do texto e dos links */
+}
+
+.navbar-custom .dropdown-menu {
+    background-color: #444; /* Cor do fundo do dropdown */
+}
+
+.navbar-custom .dropdown-item {
+    color: white; /* Cor do texto no dropdown */
+}
+
+.navbar-custom .dropdown-item:hover {
+    background-color: #555; /* Cor do item do dropdown ao passar o mouse */
+}
+
+.posicao_botao{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+/* fooder */
+
+footer{
+    background-color: #393939;
+    color: aliceblue;
+}
+
+.titulo-footer{
+    font-size: 20px;
+}
+
+.contatos{
+    padding-top: 20px;
+    padding-left: 100px;
+
+}
+
+.redes{
+    padding-top: 20px;
+    padding-right: 200px;
+}
+
+
+.tds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    font-size: 15px;
+}
+
+
+
+/* index */ 
+.titulo-index{
+    font-size: 25px;
+}
+
+.txt-index{
+    align-items: center;
+    margin-bottom: 50px;
+    font-size: 15px;
+}
+
+.imagens-carousel{
+    width: 70vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.display-flex-index{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.imagens-index{
+    width: 250px;
+    height: 250px;
+
+}
+
+.text {
+    transition: transform 0.3s ease; 
+    border: 3px solid salmon; 
+    border-radius: 10px;     
+    padding: 20px;           
+    width: 100%;             
+    max-width: 400px;        
+    height: auto;            
+    text-align: center;      
+    color: black;  
+    
+}
+
+.text:hover {
+    transform: translateY(-10px); /* Levanta o elemento 10 pixels */
+}
+
+
+
+/* Sobre */
+
+.titulo-sobre{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.texto-sobre{
+    display: flex;
+    margin-top: 30px
+}
+
+.imagens-sobre{
+    width: 200px;
+    height: 200px;
+    border-radius: 8%;
+    border: 5px solid salmon;
+    transition: transform 0.3s ease; 
+}
+
+.imagens-sobre:hover {
+    transform: translateY(-10px);
+}
+
+.texto-sobre2{
+    display: flex;
+}
+
+.imagens-sobre2{
+    width: 200px;
+    height: 200px;
+    border-radius: 8%;
+    border: 5px solid salmon;
+}
+
+.imagens-sobre2:hover {
+    transform: translateY(-10px);
+}
+
+.lista-sobre{
+    margin-top: 30px;
+}
+
+.subtitulo-sobre{
+    margin-top: 30px;
+}
+
+
+
+/* tratamentos */
+
+.titulo-tratamentos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px 50px 0px;
+}
+
+.cards{ 
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 50px;
+}
+
+.imagens-tratamentos{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* responsividade */
+
+.imagens-sobre {
+    max-width: 100%; /* Ajusta a imagem para se adaptar ao contêiner */
+    height: auto;   /* Mantém a proporção da imagem */
+}
+
+.carousel-container {
+    max-width: 1000px; /* Limita a largura do contêiner */
+    margin: auto;      /* Centraliza o contêiner na tela */
+}
+
+@media screen and(width: 768px) {
+    nav{
+        width:100vh;
+    }
+
+    
+}

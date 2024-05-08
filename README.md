@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center">Projeto Clinica de estética</h1>
 
 ## 🎯 Objetivo
@@ -84,3 +85,7 @@ Em breve
 2- Pressione 'S' e 'Enter' para confirmar.
 ```
 
+=======
+# Desafio-3
+Site desenvolvido para uma clinica de estética, 
+>>>>>>> 8cd956f043598a1f4f5c4c75287cac70ba4b230a

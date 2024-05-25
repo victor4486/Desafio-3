@@ -1,29 +1,47 @@
- /* utilizado em todos */
+ /* cores */
 
- .display-flex{
-    display: flex;
-    justify-content: space-between;
+:root {
+    --primary-color: #FA8072;
+    --secondary-color: #444;
+    --background-color: #e9fbff;
+    --text-color1:black;
+    --text-color2:aliceblue;
+}
+ 
+
+
+/* navbar */
+
+.navbar{
+    background-color: var(--primary-color);
+    color:var(--text-color2);
+    
 }
 
-.remove{
+.navbar a{
+    color:aliceblue;
     text-decoration: none;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.navbar li{
+    color:aliceblue;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.container-itens{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-itens li{
+
 }
 
 
 
-/* navbar - heater */
-
-.navbar-custom {
-    background-color: #FA8072; /* Cor salmão para a navbar */
-
-}
-
-.navbar-custom .navbar-brand,
-.navbar-custom .nav-link {
-    color: white; /* Cor do texto e dos links */
-}
-
-.navbar-custom .dropdown-menu {
+.dropdown-menu {
     background-color: #444; /* Cor do fundo do dropdown */
 }
 
@@ -71,8 +89,26 @@ footer{
     align-items: center;
     justify-content: center;
     padding:20px;
-    font-size: 15px;
+    font-size: medium;
+    text-decoration: none;
+    color: aliceblue;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
 }
+
+.tds:hover{
+    color:rgb(150, 206, 255)
+}
+
+.teste{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
 
 
 
@@ -124,7 +160,6 @@ footer{
 .text:hover {
     transform: translateY(-10px); /* Levanta o elemento 10 pixels */
 }
-
 
 
 /* Sobre */

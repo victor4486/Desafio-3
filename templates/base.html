@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Nome da clinica]</title>
+    <title>Lacerssi</title>
 
     <link rel='stylesheet' href="../static/css/style.css">
     <link rel='stylesheet' href='../static/css/normalize.css'>
@@ -11,31 +11,26 @@
     
 </head>
 
-    <!-- Navbar com fundo salmão e opção de colapso para responsividade -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container">
-            <!-- Logo do lado esquerdo -->
-            <a class="navbar-brand" href="/">
-                <img src="/static/imagens/logo.JPEG" alt="Logo" style="height: 40px; width: 40px;">
-                [Nome da clinica]
-            </a>
+    <section id='navbar'>
+        <nav class='navbar'>
 
-            <!-- Botão para dispositivos móveis -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="filter: invert(1);"></span> <!-- Ícone branco -->
-            </button>
+            <div>
+                <a class="navbar-brand" href="/">
+                    <img src="/static/imagens/logo.png" alt="Logo" style="height: 40px; width: 40px;">
+                    Lacerssi Aesthetics
+                </a>
+            </div>
 
-            <!-- Conteúdo da navbar -->
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav"> <!-- Mantém os itens do lado esquerdo -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+            <div>
+                <ul class='container-itens'>
+                    <li>
+                        <a href="/">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Sobre">Sobre</a>
+                    <li>
+                        <a href="/Sobre">Sobre</a>
                     </li>
                     <!-- Dropdown para Tratamentos -->
-                    <li class="nav-item dropdown">
+                    <li>
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Tratamentos
                         </a>
@@ -48,8 +43,9 @@
                     </li>
                 </ul>
             </div>
-        </div>
-    </nav>
+    
+        </nav>
+    </section>
 
 
 <!-- Bootstrap JavaScript -->
@@ -65,10 +61,10 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 contatos"> <!-- Responsivo com espaçamento customizado -->
                         <h3 class="titulo-footer">Contato</h3>
                         <ul class="list-unstyled"> <!-- Remove as marcações de lista padrão -->
-                            <li>Endereço: [Endereço]</li>
-                            <li>E-mail: <a href="mailto:preencher@hotmail.com">endereço_email@hotmail.com</a></li>
-                            <li>Whatsapp: (12) 93456-5678</li>
-                            <li>Telefone: (12) 3456-7896</li>
+                            <li>Endereço: R. Eng. Prudente Meireles de Morais, 1000, São José dos Campos - SP</li>
+                            <li>E-mail: <a href="mailto:lacerssi_contato@hotmail.com">lacerssi_contato@hotmail.com</a></li>
+                            <li>Whatsapp: (12) 91234-5678</li>
+                            <li>Telefone: (12) 3921-7066</li>
                         </ul>
                     </div>
     
@@ -76,15 +72,15 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 redes"> <!-- Responsivo com espaçamento customizado -->
                         <h3 class="titulo-footer">Redes Sociais</h3>
                         <ul class="list-unstyled"> <!-- Mantém estilo sem marcadores -->
-                            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-                            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                            <li><a href="https://www.instagram.com/beauteclinnic/" target="_blank">Instagram</a></li>
+                            <li><a href="https://www.facebook.com/beauteclinnic/" target="_blank">Facebook</a></li>
                         </ul>
                     </div>
                 </div>
     
                 <!-- Direitos reservados -->
-                <div class="tds"> <!-- Responsivo e centralizado -->
-                    ® Copyright by Victor4489
+                <div>
+                    <a href='https://github.com/victor4486'  class="tds">® Copyright by Victor4489</a>
                 </div>
             </div>
         </footer>

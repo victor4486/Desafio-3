@@ -3,10 +3,55 @@
 {% block conteudo %}
 
 <main>
-    <section>
-        <input type="text">
+    <div class='container-contato'>
+        <h1>Fale conosco</h1>
+        <p>Entre encontato para dúvidas, sugestões ou agendamentos</p>
 
+        <section class='form'>
+            <form>
+                <fieldset>
 
-    </section>
+                <br>
+
+                <div> 
+                    <label>Nome</label>
+                    <input type='text' name='nome' id='nome' required>
+                </div>  
+
+                <br>
+
+                <div> 
+                    <label>Email</label>
+                    <input type='email' name='email' id='email' required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label>Eu sou:</label>
+                    
+                    <input type="radio" id='PF' name='PF' value='PF' required>
+                    <label>Estou interessado em realizar um tratamento</label>
+
+                    <input type="radio" id='PF' name='PJ' value='PJ'>
+                    <label>Sou fornecedor</label>
+
+                    <input type="radio" id='PF' name='CL' value='CL'>
+                    <label>Sou cliente</label>
+                </div>
+                
+                <br>
+
+                <div>
+                    <label>Descrição</label>
+                    <textarea class="form-control" name="descricao" id="descricao" rows="8" style='width:26em' required></textarea>
+                </div>
+
+                <button class='button-contato'>Enviar</button>
+                
+            </fieldset>
+            </form> 
+        </section>
+    </div>
 </main>
 {% endblock %}

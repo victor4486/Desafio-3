@@ -274,5 +274,32 @@ footer h1{
     object-fit: cover;
 }
 
-/* responsividade */
+/* ################ contato ############### */
 
+.container-contato{
+    padding: 2rem 10rem;
+}
+
+.container-contato h1, p{
+    display: flex;
+    justify-content: center;
+}
+
+.container-contato h1{
+    font-size: 2rem;
+}
+
+.form{
+    display: block;
+    align-items: center;
+    justify-content: left;
+}
+
+
+.button-contato{
+    width: 10%;
+    height: 15%;
+    color: var(--backgroud-button);
+    background-color: var(--primary-color);
+    border-radius: 10%;
+}

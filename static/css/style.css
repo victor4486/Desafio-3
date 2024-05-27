@@ -241,7 +241,7 @@ footer h1{
     width: 200px;
     height: 200px;
     border-radius: 8%;
-    border: 5px solid salmon;
+    border: 5px solid var(--primary-color);
     transition: transform 0.3s ease; 
 }
 
@@ -295,6 +295,37 @@ footer h1{
     justify-content: left;
 }
 
+.inputbox {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.inputbox input {
+    width: 100%;
+    border: none;
+    border-bottom: #444 solid 1px;
+    letter-spacing: 2px;
+    outline: none;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.inputbox input:focus + label,
+.inputbox input:not(:placeholder-shown) + label {
+    top: -1rem;
+    left: 0;
+    font-size: 0.75rem;
+    color: #444;
+}
 
 .button-contato{
     width: 10%;
@@ -311,3 +342,4 @@ footer h1{
 .button-contato:hover{
     opacity: 0.7;
 }
+

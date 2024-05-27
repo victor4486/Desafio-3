@@ -2,92 +2,56 @@
 
 {% block conteudo %}
 
-<main>
+<section>   
     <div class="container">
-        <!-- Carousel -->
-        <div class="container my-4"> <!-- Container para alinhamento responsivo -->
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <!-- Indicadores do Carousel -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div class="gallery-wrap">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+            <div class="item item-5"></div>
+        </div>
+    </div>
+
+</section>
+
+
+<main>
+    <div class='container-text-index'>
+        <h1>Clínica de Estética em São José dos Campos, SP</h1>
+
+        <p>
+            Bem-vindo à Lacerssi Aesthetics, sua clínica de estética em São José dos Campos! Nossa missão é proporcionar a você uma experiência única de beleza e bem-estar.
+        </p>
+        <p>
+            Quer você esteja procurando rejuvenescimento facial, tratamentos corporais ou procedimentos estéticos, estamos aqui para ajudá-lo a alcançar seus objetivos de beleza.
+        </p>
+        <p>
+            Visite-nos e descubra como podemos ajudá-lo a se sentir bem e confiante.
+        </p>
+    </div>
+
+    <div class='container-img-index'>
+
+        <div class='container-img-button'>
+            <a href="/Sobre">
+                <div>
+                    <h1>Quem somos</h1>
+                    <p>Quem somos, feedbacks e valores</p>
+                    <img src="/static/imagens/laboratory-bro.png" alt="Imagem de laboratório" class="imagens-index">
                 </div>
-    
-                <!-- Slides do Carousel -->
-                <div class='imagens-carousel'>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="/static/imagens/clinica.jpg" alt="Imagem da clínica" class="d-block w-100"> <!-- Imagens ocupam a largura total -->
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/static/imagens/creme.jpg" alt="Imagem de creme" class="d-block w-100">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/static/imagens/oleo.jpg" alt="Imagem de óleo" class="d-block w-100">
-                        </div>
-                    </div>
-                </div>
-                <!-- Controles do Carousel -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span> <!-- Texto para acessibilidade -->
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Próximo</span> <!-- Texto para acessibilidade -->
-                </button>
-            </div>
+            </a>
         </div>
 
-        <div class="container my-4"> <!-- Adiciona espaçamento vertical -->
-            <div class="text-center"> <!-- Centraliza o título -->
-                <h1 class='titulo-index'>Clínica de Estética em São José dos Campos, SP</h1>
-            </div>
-    
-            <div class='txt-index text-center'> <!-- Centraliza o texto -->
-                <p>
-                    Bem-vindo à Lacerssi Aesthetics, sua clínica de estética em São José dos Campos! Nossa missão é proporcionar a você uma experiência única de beleza e bem-estar.
-                </p>
-    
-                <p>
-                    Quer você esteja procurando rejuvenescimento facial, tratamentos corporais ou procedimentos estéticos, estamos aqui para ajudá-lo a alcançar seus objetivos de beleza.
-                </p>
-    
-                <p>
-                    Visite-nos e descubra como podemos ajudá-lo a se sentir bem e confiante.
-                </p>
-            </div>
-        </div>
-    
-        <div class="container my-4"> <!-- Espaçamento vertical -->
-            <!-- Seção para quem somos e tratamentos -->
-            <div class="row justify-content-center"> <!-- Centraliza a linha -->
-                <!-- Quem somos -->
-                <div class="col-md-6 col-12 mb-3 d-flex justify-content-center"> <!-- Centraliza a coluna -->
-                    <a href="/Sobre" class="text-decoration-none text-dark"> <!-- Remove sublinhados e cor padrão -->
-                        <div class="text"> <!-- Customização com borda e animação -->
-                            <h1>Quem somos</h1>
-                            <p>Quem somos, feedbacks e valores</p>
-                            <img src="/static/imagens/laboratory-bro.png" alt="Imagem de laboratório" class="imagens-index"> <!-- Centraliza a imagem -->
-                        </div>
-                    </a>
+        <div class='container-img-button'>
+            <a href="/Tratamentos">
+                <div> 
+                    <h1>Tratamentos</h1>
+                    <p>Conheça nossos tratamentos</p>
+                    <img src="/static/imagens/massagem-facial.png" alt="Imagem de massagem" class="imagens-index">
                 </div>
-                <!-- Tratamentos -->
-                <div class="col-md-6 col-12 mb-3 d-flex justify-content-center"> <!-- Centraliza a coluna -->
-                    <a href="/Tratamentos" class="text-decoration-none text-dark"> <!-- Remove sublinhados -->
-                        <div class="text"> <!-- Customização com borda e animação -->
-                            <h1>Tratamentos</h1>
-                            <p>Conheça nossos tratamentos</p>
-                            <img src="/static/imagens/massagem-facial.png" alt="Imagem de massagem" class="imagens-index">
-                        </div>
-                    </a>
-                </div>
-            </div>
+            </a>
         </div>
-    
-    
-    
-    </div>
+    </div>   
 </main>
 {% endblock %}

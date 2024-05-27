@@ -206,6 +206,7 @@ footer h1{
 
 .container-img-button:hover {
     transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .imagens-index {
@@ -213,17 +214,27 @@ footer h1{
     height: 250px;
 }
 
-/* Sobre */
-.titulo-sobre {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    font-size: 25px;
+/* ##################### Sobre ###################### */
+
+.container-sobre{
+    padding:0% 7rem 1rem
 }
 
-.texto-sobre {
+.container-sobre h1, p{
     display: flex;
-    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+} 
+
+.container-sobre h1{
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+.display-flex{
+    display: flex;
+    padding: 3rem 5rem;
+    gap: 10%;
 }
 
 .imagens-sobre {
@@ -236,29 +247,11 @@ footer h1{
 
 .imagens-sobre:hover {
     transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.texto-sobre2 {
-    display: flex;
-}
-
-.imagens-sobre2 {
-    width: 200px;
-    height: 200px;
-    border-radius: 8%;
-    border: 5px solid salmon;
-}
-
-.imagens-sobre2:hover {
-    transform: translateY(-10px);
-}
-
-.lista-sobre {
-    margin-top: 30px;
-}
-
-.subtitulo-sobre {
-    margin-top: 30px;
+.padding-sobre{
+    padding: 0% 15%
 }
 
 /* tratamentos */
@@ -282,18 +275,4 @@ footer h1{
 }
 
 /* responsividade */
-.imagens-sobre {
-    max-width: 100%; /* Ajusta a imagem para se adaptar ao contêiner */
-    height: auto;   /* Mantém a proporção da imagem */
-}
 
-.carousel-container {
-    max-width: 1000px; /* Limita a largura do contêiner */
-    margin: auto;      /* Centraliza o contêiner na tela */
-}
-
-@media screen and (width: 768px) {
-    nav {
-        width: 100vh;
-    }
-}

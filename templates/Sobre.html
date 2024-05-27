@@ -4,80 +4,63 @@
 {% block conteudo %}
 
 
-<main>
-    <div class="container my-4"> <!-- Espaçamento vertical -->
-        <h2 class="text-center">Quem Somos</h2> <!-- Centraliza o título -->
+<main class='container-sobre'>
+    
+    <div>
+        <h1>Quem Somos</h1>
 
-        <!-- Layout responsivo com Bootstrap -->
-        <div class="row justify-content-center align-items-center"> <!-- Centraliza os itens -->
-            <!-- Texto sobre a clínica -->
-            <div class="col-md-6 text-center"> <!-- Alinha o texto ao centro -->
-                <p class="texto-sobre">
-                    A Lacerssi Aesthetic é uma clínica de estética e bem-estar localizada em São José dos Campos. Fundada em 2025 por Mariana Lacerda de Assis, uma biomédica comprometida com a ciência e a beleza, a clínica é um espaço onde tratamentos avançados e uma equipe multidisciplinar se unem para oferecer resultados excepcionais. Nossa equipe é composta por nutricionistas, dentistas e outros profissionais especializados em estética e bem-estar, todos dedicados a proporcionar uma experiência única e personalizada para nossos clientes.
-                </p>
-            </div>
-
-            <!-- Imagem da fundadora -->
-            <div class="col-md-4 text-center"> <!-- Alinha a imagem ao centro -->
-                <img src="static/imagens/mary.jpg" class="imagens-sobre" alt="Fundadora">
-            </div>
+        <div class='display-flex'>
+            <p>
+                A Lacerssi Aesthetic é uma clínica de estética e bem-estar localizada em São José dos Campos. Fundada em 2025 por Mariana Lacerda de Assis, uma biomédica comprometida com a ciência e a beleza, a clínica é um espaço onde tratamentos avançados e uma equipe multidisciplinar se unem para oferecer resultados excepcionais. Nossa equipe é composta por nutricionistas, dentistas e outros profissionais especializados em estética e bem-estar, todos dedicados a proporcionar uma experiência única e personalizada para nossos clientes.
+            </p>
+            <img src="static/imagens/mary.jpg" class="imagens-sobre" alt="Fundadora">
         </div>
     </div>
 
     <hr>
 
-    <div class="container my-4"> <!-- Espaçamento vertical -->
-        <h2 class="text-center">Como a Lacerssi Aesthetic Foi Fundada</h2>
+    <div>
+        <h1>Como a Lacerssi Aesthetic Foi Fundada</h1>
 
-        <!-- Layout responsivo para centralizar o texto -->
-        <div class="row justify-content-center align-items-center"> <!-- Centraliza os elementos na linha -->
-            <!-- Texto -->
-            <div class="col-md-8 col-12 text-center"> <!-- Alinha o texto ao centro -->
-                <p class="texto-sobre2">
-                    Mariana Lacerda de Assis sempre acreditou no poder da ciência para transformar a estética e o bem-estar. Com sua formação em biomedicina, ela percebeu a necessidade de uma abordagem inovadora no campo da estética. A partir dessa visão, ela reuniu um time de profissionais altamente qualificados para criar a Lacerssi Aesthetic. Desde o início, a clínica se destacou pela combinação de tecnologia de ponta e uma abordagem holística para a beleza, sempre focada em resultados seguros e eficazes. Com um ambiente acolhedor e atendimento personalizado, rapidamente conquistamos nosso espaço no mercado de estética em São José dos Campos.
-                </p>
-            </div>
-
-            <!-- Imagem -->
-            <div class="col-md-4 col-12 text-center"> <!-- Centraliza a imagem -->
-                <img src='static/imagens/criacao.png' class='imagens-sobre2' alt='Criação'>
-            </div>
+        <div class='display-flex'>
+            <p>
+                Mariana Lacerda de Assis sempre acreditou no poder da ciência para transformar a estética e o bem-estar. Com sua formação em biomedicina, ela percebeu a necessidade de uma abordagem inovadora no campo da estética. A partir dessa visão, ela reuniu um time de profissionais altamente qualificados para criar a Lacerssi Aesthetic. Desde o início, a clínica se destacou pela combinação de tecnologia de ponta e uma abordagem holística para a beleza, sempre focada em resultados seguros e eficazes. Com um ambiente acolhedor e atendimento personalizado, rapidamente conquistamos nosso espaço no mercado de estética em São José dos Campos.
+            </p>
+            <img src='static/imagens/criacao.png' class='imagens-sobre' alt='criacao'>
         </div>
     </div>
 
-        <hr>
+    <hr>
 
-        <div class="container my-4"> <!-- Espaçamento vertical -->
-            <h3 class="text-center">Missão, Visão e Valores</h3> <!-- Centraliza o título -->
+    <div class='padding-sobre'>
+        <h1>Missão, Visão e Valores</h1>
+        
+        <div>
+            <p>
+                Nossa missão na Lacerssi Aesthetic é proporcionar tratamentos estéticos de alta qualidade, que respeitem a beleza natural e promovam o bem-estar de cada cliente. Acreditamos em uma abordagem holística para a estética, onde a saúde e a beleza se complementam. Nossa visão é ser referência em tratamentos estéticos, sempre inovando e proporcionando experiências excepcionais aos nossos clientes.
+            </p>
             
-            <div class="row justify-content-center"> <!-- Centraliza o conteúdo -->
-                <div class="col-md-8 col-12 text-center"> <!-- Alinha ao centro -->
-                    <p class="texto-sobre">
-                        Nossa missão na Lacerssi Aesthetic é proporcionar tratamentos estéticos de alta qualidade, que respeitem a beleza natural e promovam o bem-estar de cada cliente. Acreditamos em uma abordagem holística para a estética, onde a saúde e a beleza se complementam. Nossa visão é ser referência em tratamentos estéticos, sempre inovando e proporcionando experiências excepcionais aos nossos clientes.
-                    </p>
-                    
-                    <h6 class="subtitulo-sobre">Nossos valores incluem:</h6> <!-- Centraliza o subtítulo -->
-                    
-                    <ul class="lista-sobre text-start"> <!-- Alinha as listas à esquerda para melhor leitura -->
-                        <li>
-                            Inovação: Estamos sempre em busca das melhores tecnologias e técnicas para oferecer tratamentos de última geração.
-                            Personalização: Cada cliente é único, e nossos tratamentos são adaptados para atender às necessidades individuais.
-                        </li>
-                        <br> <!-- Espaçamento entre itens da lista -->
-    
-                        <li>
-                            Qualidade: Compromisso com a excelência em tudo o que fazemos, desde o atendimento ao cliente até a execução dos tratamentos.
-                        </li>
-                        <br>
-    
-                        <li>
-                            Integridade: Atuamos com ética e transparência, garantindo segurança e confiança em nossos serviços.
-                            Convidamos você a conhecer a Lacerssi Aesthetic e descobrir como nossa equipe pode ajudá-lo a alcançar seus objetivos de beleza e bem-estar. Estamos prontos para recebê-lo em São José dos Campos para uma experiência transformadora.
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <h1>Nossos valores incluem:</h1>
+
+            <ul>
+                <li>
+                    Inovação: Estamos sempre em busca das melhores tecnologias e técnicas para oferecer tratamentos de última geração.
+                    Personalização: Cada cliente é único, e nossos tratamentos são adaptados para atender às necessidades individuais.
+                </li>
+                <br> 
+
+                <li>
+                    Qualidade: Compromisso com a excelência em tudo o que fazemos, desde o atendimento ao cliente até a execução dos tratamentos.
+                </li>
+                <br>
+
+                <li>
+                    Integridade: Atuamos com ética e transparência, garantindo segurança e confiança em nossos serviços.
+                    Convidamos você a conhecer a Lacerssi Aesthetic e descobrir como nossa equipe pode ajudá-lo a alcançar seus objetivos de beleza e bem-estar. Estamos prontos para recebê-lo em São José dos Campos para uma experiência transformadora.
+                </li>
+            </ul>
         </div>
+    </div>  
 </main>
 
 {% endblock %}

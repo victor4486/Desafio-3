@@ -8,12 +8,16 @@ def index():
     return render_template('index.html')
 
 @app.route('/Tratamentos')
-def contatos():
+def Tratamentos():
     return render_template('Tratamentos.html')
 
 @app.route('/Sobre')
-def quem_somos():
+def Sobre():
     return render_template('Sobre.html')
+
+@app.route('/contato')
+def Contato():
+    return render_template('contato.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)

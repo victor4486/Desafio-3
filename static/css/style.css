@@ -1,129 +1,136 @@
- /* cores */
-
+/* ################# cores ############################# */
 :root {
     --primary-color: #FA8072;
     --secondary-color: #444;
     --background-color: #e9fbff;
-    --text-color1:black;
-    --text-color2:aliceblue;
+    --text-color1: #393939;
+    --text-color2: aliceblue;
+    --backgroud-button: #dadada;
 }
- 
 
-
-/* navbar */
-
-.navbar{
+/* ###################### navbar ################### */
+.navbar {
     background-color: var(--primary-color);
-    color:var(--text-color2);
-    
-}
-
-.navbar a{
-    color:aliceblue;
-    text-decoration: none;
-    transition: color 0.3s ease, text-decoration-color 0.3s ease;
-}
-
-.navbar li{
-    color:aliceblue;
-    text-decoration: none;
-    transition: color 0.3s ease, text-decoration-color 0.3s ease;
-}
-
-.container-itens{
+    color: var(--text-color2);
     display: flex;
+    padding: 1rem;
+}
+
+.navbar a, .navbar ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.navbar a:hover, .navbar ul li a:hover {
+    color: var(--text-color1);
+}
+
+.container-itens {
+    display: flex;
+    list-style-type: none;
+    padding: 1.5rem 5rem;
+    gap: 8%;
+}
+
+.container-img {
+    width: 20%;
+    padding-left: 5rem;
+    border-radius: 2%;
+}
+
+/* ##################### dropdown ######################### */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    padding-right: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 0.5rem;
+    background-color: var(--backgroud-button);
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: var(--text-color1);
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--backgroud-button);
+    color: var(--text-color1);;
+}
+
+
+/* ################# footer ################ */
+footer {
+    background-color: var(--text-color1);
+    color: var(--background-color);
+    text-decoration: none;
+    padding: 2% 15% 2% 10% ;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer h1{
+    font-size: 1.2rem;
+}
+
+.remove li a{
+    text-decoration: none;
     list-style-type: none;
 }
 
-.nav-itens li{
-
-}
-
-
-
-.dropdown-menu {
-    background-color: #444; /* Cor do fundo do dropdown */
-}
-
-.navbar-custom .dropdown-item {
-    color: white; /* Cor do texto no dropdown */
-}
-
-.navbar-custom .dropdown-item:hover {
-    background-color: #555; /* Cor do item do dropdown ao passar o mouse */
-}
-
-.posicao_botao{
+.copyright a{
     display: flex;
-    justify-content: space-between;
-
-}
-
-
-
-/* fooder */
-
-footer{
-    background-color: #393939;
-    color: aliceblue;
-}
-
-.titulo-footer{
-    font-size: 20px;
-}
-
-.contatos{
-    padding-top: 20px;
-    padding-left: 100px;
-
-}
-
-.redes{
-    padding-top: 20px;
-    padding-right: 200px;
-}
-
-
-.tds {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    padding:20px;
-    font-size: medium;
     text-decoration: none;
-    color: aliceblue;
-    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+    color:var(--backgroud-button);
 }
 
-.tds:hover{
-    color:rgb(150, 206, 255)
+.copyright a:hover{
+    color:var(--background-color);
 }
 
-.teste{
-    display: flex;
-    justify-content: space-between;
-}
+/* ########## icons ########## */
 
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: white;
+    background-color:var(--primary-color);
+    border-radius: 5%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
 
-
-
-
-
-
-
-
-/* index */ 
-.titulo-index{
+/* index */
+.titulo-index {
     font-size: 25px;
 }
 
-.txt-index{
+.txt-index {
     align-items: center;
     margin-bottom: 50px;
     font-size: 15px;
 }
 
-.imagens-carousel{
+.imagens-carousel {
     width: 70vh;
     height: auto;
     display: flex;
@@ -132,16 +139,14 @@ footer{
     margin: auto;
 }
 
-.display-flex-index{
+.display-flex-index {
     display: flex;
     justify-content: space-between;
-
 }
 
-.imagens-index{
+.imagens-index {
     width: 250px;
     height: 250px;
-
 }
 
 .text {
@@ -154,29 +159,26 @@ footer{
     height: auto;            
     text-align: center;      
     color: black;  
-    
 }
 
 .text:hover {
     transform: translateY(-10px); /* Levanta o elemento 10 pixels */
 }
 
-
 /* Sobre */
-
-.titulo-sobre{
+.titulo-sobre {
     display: flex;
     justify-content: center;
     margin-top: 30px;
     font-size: 25px;
 }
 
-.texto-sobre{
+.texto-sobre {
     display: flex;
-    margin-top: 30px
+    margin-top: 30px;
 }
 
-.imagens-sobre{
+.imagens-sobre {
     width: 200px;
     height: 200px;
     border-radius: 8%;
@@ -188,11 +190,11 @@ footer{
     transform: translateY(-10px);
 }
 
-.texto-sobre2{
+.texto-sobre2 {
     display: flex;
 }
 
-.imagens-sobre2{
+.imagens-sobre2 {
     width: 200px;
     height: 200px;
     border-radius: 8%;
@@ -203,39 +205,35 @@ footer{
     transform: translateY(-10px);
 }
 
-.lista-sobre{
+.lista-sobre {
     margin-top: 30px;
 }
 
-.subtitulo-sobre{
+.subtitulo-sobre {
     margin-top: 30px;
 }
-
-
 
 /* tratamentos */
-
-.titulo-tratamentos{
+.titulo-tratamentos {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 50px 0px 50px 0px;
 }
 
-.cards{ 
+.cards { 
     display: flex;
     justify-content: space-between;
     margin: 15px 50px;
 }
 
-.imagens-tratamentos{
+.imagens-tratamentos {
     width: 200px;
     height: 200px;
     object-fit: cover;
 }
 
 /* responsividade */
-
 .imagens-sobre {
     max-width: 100%; /* Ajusta a imagem para se adaptar ao contêiner */
     height: auto;   /* Mantém a proporção da imagem */
@@ -246,10 +244,8 @@ footer{
     margin: auto;      /* Centraliza o contêiner na tela */
 }
 
-@media screen and(width: 768px) {
-    nav{
-        width:100vh;
+@media screen and (width: 768px) {
+    nav {
+        width: 100vh;
     }
-
-    
 }

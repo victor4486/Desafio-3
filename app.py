@@ -1,7 +1,16 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request, redirect, url_for
+from flask_mysqldb import MySQL
 
 app = Flask(__name__, static_folder='static')
+mysql = MySQL()
+
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'farofa123'
+app.config['MYSQL_DB'] = 'formulario_contato'
+
+mysql.init_app(app)
+
 
 @app.route('/')
 def index():
@@ -17,7 +26,34 @@ def Sobre():
 
 @app.route('/contato')
 def Contato():
+    if request.method == 'POST':
+        # Pega os dados do formulário
+        nome = request.form['nome']
+        email = request.form['email']
+        telefone = request.form['telefone']
+        nascimento = request.form['nascimento']
+        sexo = request.form['sexo']
+        tipo = request.form['tipo']
+        descricao = request.form['descricao']
+    
+        # Cria um cursor para a conexão MySQL
+        cur = mysql.connection.cursor()
+        
+        # Executa a inserção no banco de dados
+        cur.execute("""
+            INSERT INTO contatos (nome, email, telefone, nascimento, sexo, tipo, descricao) 
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+        """, (nome, email, telefone, nascimento, sexo, tipo, descricao))
+        
+        # Confirma a transação
+        mysql.connection.commit()
+        
+        # Fecha o cursor
+        cur.close()
+        
     return render_template('contato.html')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)

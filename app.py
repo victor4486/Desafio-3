@@ -7,7 +7,7 @@ mysql = MySQL()
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'farofa123'
-app.config['MYSQL_DB'] = 'formulario_contato'
+app.config['MYSQL_DB'] = 'formulario-contato'
 
 mysql.init_app(app)
 
@@ -24,13 +24,13 @@ def Tratamentos():
 def Sobre():
     return render_template('Sobre.html')
 
-@app.route('/contato')
+@app.route('/contato', methods=['GET', 'POST'])
 def Contato():
     if request.method == 'POST':
         # Pega os dados do formulário
         nome = request.form['nome']
         email = request.form['email']
-        telefone = request.form['telefone']
+        telefone = request.form['number']
         nascimento = request.form['nascimento']
         sexo = request.form['sexo']
         tipo = request.form['tipo']

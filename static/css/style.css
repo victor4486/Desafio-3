@@ -348,3 +348,141 @@ footer h1{
     opacity: 0.7;
 }
 
+/* ################## Responsividade ################## */
+
+@media only screen and (max-width: 767px) {
+
+    /* ########### navbar ########## */
+
+    /* ########### footer ######### */
+    footer{
+        padding: 15px;
+    }
+
+    .container-footer{
+        display: block;
+        align-items: center;
+        
+    }
+
+    .container-footer h1, p{
+        display: flex;
+        justify-content: center ;
+    }
+
+    .container-footer a{
+        margin-left: 10px ;
+    }
+
+    .icons{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+
+    /* ########### index ########## */
+    main{
+        padding: 10%
+    }
+
+    /* ########## carousel ######### */
+    .gallery-wrap {
+        display: flex;
+        width: 100%;
+        height: 200px;
+    }
+
+    /* ########## textos ########### */
+
+    .container-text-index h1{
+        font-size: 1.2rem;
+    }
+
+    .container-text-index p{
+        font-size: 0.9rem;
+    }
+
+    /* ########### buttons img ########### */
+    
+    .container-img-button{
+        margin-left: 30px;
+        padding: 10%;
+        width: 250px;
+    }
+
+    .container-img-index h1, p{
+        margin-left: 20px;
+    }
+
+    .container-img-index{
+        display: block;
+    }
+
+    .imagens-index{
+        margin-left: 20px;
+        width: 150px;
+        height: auto;
+    }
+
+    /* ############ sobre ############ */
+
+    .container-sobre{
+        padding: 0;
+    }
+
+    .container-sobre h1{
+        font-size: 1.2rem;
+    }
+
+    .container-sobre p{
+        font-size: 0.9rem;
+    }
+
+    .display-flex, .padding-sobre{
+        display: block;
+        justify-content: center;
+        margin: 5%;
+        padding: 0;
+    }
+
+    .imagens-sobre{
+        margin-left: 70px;
+    }
+
+    /* ############ contato ########### */
+
+    .container-contato{
+        padding: 10px;
+    }
+
+    .container-contato h1{
+        font-size: 1.2rem;
+    }
+    .container-contato p{
+        font-size: 0.9rem;
+        margin-bottom: 40px;
+    }
+
+    .container-input{
+        display: block;
+
+    }
+
+    .font-size{
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        align-items: top;
+    }
+
+    .form-control{
+        width: 90%;
+    }
+
+ 
+
+
+
+
+}

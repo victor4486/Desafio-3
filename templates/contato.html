@@ -42,6 +42,7 @@
 
                     <div>
                         <label>Sexo:</label>
+                        <br>
                         <input type="radio" id='masculino' name='sexo' value='masculino' required>
                         <label for='masculino'>Masculino</label>
                         <input type="radio" id='feminino' name='sexo' value='feminino' required>
@@ -53,11 +54,15 @@
                     <br>
 
                     <div>
-                        <label>Eu sou:</label>
-                        <input type="radio" id='PF' name='tipo' value='PF' required>
-                        <label for='PF'>Estou interessado em realizar um tratamento</label>
+                        <label class='display-block'>Eu sou:</label>
+                        <br>
+                        <div class='font-size'>
+                            <input type="radio" id='PF' name='tipo' value='PF' required>
+                            <label for='PF' >Estou interessado em realizar um tratamento</label>
+                        </div>
                         <input type="radio" id='CL' name='tipo' value='CL' required>
                         <label for='CL'>Sou cliente</label>
+                        <br>
                         <input type="radio" id='PJ' name='tipo' value='PJ' required>
                         <label for='PJ' >Sou fornecedor</label>
                     </div>
@@ -66,10 +71,10 @@
 
                     <div>
                         <label>Descrição:</label>
-                        <textarea class="form-control" name="descricao" id="descricao" rows="8" style='width:26em' required></textarea>
+                        <textarea class="form-control" name="descricao" id="descricao" rows="8" required></textarea>
                     </div>
 
-                    <button class='button-contato'>Enviar</button>
+                    <button class='button-contato' type='submit'>Enviar</button>
                 </fieldset>
             </form> 
         </section>

@@ -7,7 +7,7 @@ mysql = MySQL()
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'farofa123'
-app.config['MYSQL_DB'] = 'formulario-contato'
+app.config['MYSQL_DB'] = 'formulario_contato'
 
 mysql.init_app(app)
 

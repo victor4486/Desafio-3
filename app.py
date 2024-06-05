@@ -24,10 +24,14 @@ def Tratamentos():
 def Sobre():
     return render_template('Sobre.html')
 
+@app.route('/admin')
+def Admin():
+    return render_template('admin.html')
+
+
 @app.route('/contato', methods=['GET', 'POST'])
 def Contato():
     if request.method == 'POST':
-        # Pega os dados do formulário
         nome = request.form['nome']
         email = request.form['email']
         telefone = request.form['number']
@@ -36,19 +40,15 @@ def Contato():
         tipo = request.form['tipo']
         descricao = request.form['descricao']
     
-        # Cria um cursor para a conexão MySQL
         cur = mysql.connection.cursor()
         
-        # Executa a inserção no banco de dados
         cur.execute("""
             INSERT INTO contatos (nome, email, telefone, nascimento, sexo, tipo, descricao) 
             VALUES (%s, %s, %s, %s, %s, %s, %s)
         """, (nome, email, telefone, nascimento, sexo, tipo, descricao))
         
-        # Confirma a transação
         mysql.connection.commit()
         
-        # Fecha o cursor
         cur.close()
         
     return render_template('contato.html')

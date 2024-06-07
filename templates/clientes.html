@@ -1,0 +1,58 @@
+{% extends "baseadm.html" %}
+{% block conteudo %}
+
+<main>
+
+    <h1>Painel de clientes</h1>
+    <p>Mensagens, dúvidas e feebacks</p>
+    
+    <form method="get" action="{{ url_for('clientes') }}">
+        <label for="filtro">Filtrar por:</label>
+        <select id="filtro" name="filtro" onchange="this.form.submit()">
+          <option value="todos" {% if filtro == 'todos' %}selected{% endif %}>Todos</option>
+          <option value="visualizado" {% if filtro == 'visualizado' %}selected{% endif %}>Visualizado</option>
+          <option value="nao_visualizado" {% if filtro == 'nao_visualizado' %}selected{% endif %}>Não Visualizado</option>
+        </select>
+      </form>
+  
+      <table border="1">
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th>Data de Nascimento</th>
+          <th>Sexo</th>
+          <th>Tipo</th>
+          <th>Descrição</th>
+          <th>Visualizado</th>
+          <th>Data de Visualização</th>
+          <th>Ações</th>
+        </tr>
+        {% for mensagem in mensagens %}
+        <tr>
+          <td>{{ mensagem[1] }}</td>
+          <td>{{ mensagem[2] }}</td>
+          <td>{{ mensagem[3] }}</td>
+          <td>{{ mensagem[4] }}</td>
+          <td>{{ mensagem[5] }}</td>
+          <td>{{ mensagem[6] }}</td>
+          <td>{{ mensagem[7] }}</td>
+          <td>{{ 'Sim' if mensagem[8] else 'Não' }}</td>
+          <td>{{ mensagem[9] if mensagem[9] else '' }}</td>
+          <td>
+            {% if not mensagem[8] %}
+            <form action="{{ url_for('mark_as_viewed', id=mensagem[0]) }}" method="post" style="display:inline;">
+              <button type="submit">Marcar como Visualizado</button>
+            </form>
+            {% endif %}
+            <form action="{{ url_for('delete_message', id=mensagem[0]) }}" method="post" style="display:inline;">
+              <button type="submit">Excluir</button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+
+</main>
+
+{% endblock %}

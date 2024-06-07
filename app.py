@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_mysqldb import MySQL
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
 
 app = Flask(__name__, static_folder='static')
 app.config['SECRET_KEY'] = 'seu_chave_secreta_aqui'
@@ -71,6 +72,9 @@ def contato():
         
         cur.close()
         
+        flash('Contato adicionado com sucesso!')
+        return redirect(url_for('contato'))
+        
     return render_template('contato.html')
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -96,5 +100,67 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 
+@app.route('/Clientes', methods=['GET', 'POST'])
+@login_required
+def clientes():
+    if not current_user.is_admin:
+        return redirect(url_for('index'))
+
+    filtro = request.args.get('filtro', 'todos')
+    
+    cur = mysql.connection.cursor()
+    if filtro == 'visualizado':
+        cur.execute("SELECT * FROM contatos WHERE visualizado = TRUE")
+    elif filtro == 'nao_visualizado':
+        cur.execute("SELECT * FROM contatos WHERE visualizado = FALSE")
+    else:
+        cur.execute("SELECT * FROM contatos")
+    mensagens = cur.fetchall()
+    cur.close()
+    
+    return render_template('clientes.html', mensagens=mensagens, filtro=filtro)
+
+@app.route('/delete_message/<int:id>', methods=['POST', 'GET'])
+@login_required
+def delete_message(id):
+    if not current_user.is_admin:
+        return redirect(url_for('index'))
+
+    cur = mysql.connection.cursor()
+    cur.execute("DELETE FROM contatos WHERE id = %s", (id,))
+    mysql.connection.commit()
+    cur.close()
+    
+    flash('Mensagem excluída com sucesso!')
+    return redirect(url_for('clientes'))
+
+@app.route('/mark_as_viewed/<int:id>', methods=['POST', 'GET'])
+@login_required
+def mark_as_viewed(id):
+    if not current_user.is_admin:
+        return redirect(url_for('index'))
+
+    cur = mysql.connection.cursor()
+    cur.execute("UPDATE contatos SET visualizado = TRUE, data_de_visualizacao = %s WHERE id = %s", (datetime.now(), id))
+    mysql.connection.commit()
+    cur.close()
+    
+    flash('Mensagem marcada como visualizada!')
+    return redirect(url_for('clientes'))
+
+@app.route('/agenda')
+@login_required
+def agenda():
+    if not current_user.is_admin:
+        return redirect(url_for('index'))
+    return render_template('agenda.html')
+
+@app.route('/fornecedores')
+@login_required
+def fornecedores():
+    if not current_user.is_admin:
+        return redirect(url_for('index'))
+    return render_template('fornecedores.html')
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(debug=True)
